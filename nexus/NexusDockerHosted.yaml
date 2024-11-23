@@ -1,0 +1,8 @@
+apiVersion: ppfbanka.cz/v1alpha1
+kind: NexusDocker
+metadata:
+  name: docker-sandbox-hosted
+spec:
+  mode: hosted
+  tcpPort: 6100
+  hosted: {}

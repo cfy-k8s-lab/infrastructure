@@ -1,0 +1,9 @@
+apiVersion: ppfbanka.cz/v1alpha1
+kind: NexusRoutingRule
+metadata:
+  name: gcr-io-whitelist
+spec:
+  mode: "ALLOW"
+  matchers:
+  - "^/v2/kubebuilder/kube-rbac-proxy/.*$"
+

@@ -1,0 +1,13 @@
+apiVersion: ppfbanka.cz/v1alpha1
+kind: NexusDocker
+metadata:
+  name: docker-quay-io-proxy
+spec:
+  mode: proxy
+  tcpPort: 6001
+  proxy:
+    sourceUrl: https://quay.io
+    routingRuleName: quay-io-whitelist
+    authentication:
+      username: username
+      password: password

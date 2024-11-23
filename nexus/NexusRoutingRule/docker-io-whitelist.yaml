@@ -1,0 +1,25 @@
+apiVersion: ppfbanka.cz/v1alpha1
+kind: NexusRoutingRule
+metadata:
+  name: docker-io-whitelist
+spec:
+  mode: "ALLOW"
+  matchers:
+  - "^/v2/davidmachacek/.*$"
+  - "^/v2/argoproj/.*$"
+  - "^/v2/library/alpine/.*$"
+  - "^/v2/library/nginx/.*$"
+  - "^/v2/library/node/.*$"
+  - "^/v2/library/postgres/.*$"
+  - "^/v2/library/redis/.*$"
+  - "^/v2/library/ubuntu/.*$"
+  - "^/v2/library/haproxy/.*$"
+  - "^/v2/grafana/.*$"
+  - "^/v2/bitnami/.*$"
+  - "^/v2/apache/.*$"
+  - "^/v2/library/busybox/.*$"
+  - "^/v2/library/httpd/.*$"
+  - "^/v2/djkormo/adcs-issuer/.*$"
+  - "^/v2/aquasec/starboard-operator/.*$"
+  - "^/v2/aquasec/kube-bench/.*$"
+

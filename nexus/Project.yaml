@@ -1,0 +1,31 @@
+apiVersion: ppfbanka.cz/v1alpha1
+kind: Project
+metadata:
+  annotations:
+    ppfbanka.cz/docker-repository: nexus.pmb.cz:6101
+    ppfbanka.cz/helm-repository: https://nexus.pmb.cz/repository/helm-{{ .metadata.name }}-hosted
+    ppfbanka.cz/git-repository: gitlab.pmb.cz/ocp_apps/{{ .metadata.name }}
+  name: sandbox
+spec:
+  displayName: SANDBOX
+  egressIPs:
+    - 172.18.208.40
+  environments:
+    - name: uat
+      network:
+        # Source IP or CIDR
+        ingress: []
+        # Destination IP, CIRD or URL and Port
+        egress: []
+    - name: sit
+      network:
+        # Source IP or CIDR
+        ingress: []
+        # Destination IP, CIRD or URL and Port
+        egress: []
+  resources:
+    hard:
+      requests.cpu: 32
+      requests.memory: 128Gi
+      #limits.cpu: 64
+      #limits.memory: 256Gi

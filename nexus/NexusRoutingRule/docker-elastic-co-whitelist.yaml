@@ -1,0 +1,12 @@
+apiVersion: ppfbanka.cz/v1alpha1
+kind: NexusRoutingRule
+metadata:
+  name: docker-elastic-co-whitelist
+spec:
+  mode: "ALLOW"
+  matchers:
+  - "^/v2/beats/.*$"
+  - "^/v2/kibana/.*$"
+  - "^/v2/elasticsearch/.*$"
+  - "^/v2/logstash/.*$"
+

@@ -1,0 +1,14 @@
+apiVersion: ppfbanka.cz/v1alpha1
+kind: NexusRoutingRule
+metadata:
+  name: quay-io-whitelist
+spec:
+  mode: "ALLOW"
+  matchers:
+  - "^/v2/cloud-for-you/.*$"
+  - "^/v2/strimzi/operator/.*$"
+  - "^/v2/openshift-release-dev/.*$"
+  - "^/v2/jetstack/cert-manager-controller/.*$"
+  - "^/v2/jetstack/cert-manager-cainjector/.*$"
+  - "^/v2/jetstack/cert-manager-webhook/.*$"
+

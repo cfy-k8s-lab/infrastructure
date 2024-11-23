@@ -1,0 +1,10 @@
+apiVersion: ppfbanka.cz/v1alpha1
+kind: NexusRoutingRule
+metadata:
+  name: ghcr-io-whitelist
+spec:
+  mode: "ALLOW"
+  matchers:
+  - "^/v2/davidmachacek/.*$"
+  - "^/v2/grafana/grafana-operator/.*$"
+

@@ -1,0 +1,9 @@
+apiVersion: ppfbanka.cz/v1alpha1
+kind: NexusRoutingRule
+metadata:
+  name: registry-aquasec-com-whitelist
+spec:
+  mode: "ALLOW"
+  matchers:
+  - "^/v2/.*$"
+
